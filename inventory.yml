@@ -1,0 +1,15 @@
+---
+all:
+  children:
+    vault:
+      hosts:
+        host1:
+        host2:
+      vars:
+        endpoints:
+        - host: target_host1.example.com
+          port: target_port
+        - host: target_host2.example.com
+          port: target_port
+        - host: target_host2.example.com
+          port: target_port
