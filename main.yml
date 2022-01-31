@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Host_check
+      wait_for:
+        host: '{{ item.host }}'
+        port: '{{ item.port }}'
+        timeout: 1
+      loop: '{{ endpoints }}'
+      register: s
+    - name: show failed
+      debug:
+        msg: '{{ s.results|select("failed")|map(attribute="item")|list }}'

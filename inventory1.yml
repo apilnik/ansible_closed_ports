@@ -1,0 +1,11 @@
+---
+all:
+  children:
+    vault:
+      hosts:
+        kopnswapp32:
+        dopnswapp32:
+      vars:
+        endpoints:
+        - host: target_host.example.com
+          port: target_port
